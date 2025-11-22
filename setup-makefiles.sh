@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=Meizu21Note
+DEVICE=m2468
 VENDOR=meizu
 
 # Load extract_utils and do some sanity checks
