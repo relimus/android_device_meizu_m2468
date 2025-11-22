@@ -4163,3 +4163,7 @@ vendor/lib64/vendor.xingji.hal.starCore@1.1.so
 vendor/lib64/vendor.xingji.hardware.biometrics.face@1.0.so
 vendor/lib64/vendor.xingji.hardware.qsee.store@1.0.so
 vendor/usr/keylayout/Vendor_2212_Product_0010.kl
+
+# Fix udefined modules
+vendor/lib/libcld80211.so
+vendor/lib64/libcld80211.so
