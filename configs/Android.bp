@@ -7,8 +7,8 @@ prebuilt_etc {
     name: "device_odm_audio_sku_files",
     relative_install_path: "audio/sku_kalama",
     srcs: [
-        "audio/sku_kalama/mixer_paths_pineapple_mtp.xml",
-        "audio/sku_kalama/resourcemanager_pineapple_mtp.xml",
+        "audio/sku_kalama/mixer_paths_kalama_mtp.xml",
+        "audio/sku_kalama/resourcemanager_kalama_mtp.xml",
     ],
     device_specific: true
 }

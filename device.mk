@@ -65,11 +65,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_VIRTUAL_AB_COMPRESSION_METHOD := lz4
 
 # API levels
+BOARD_SHIPPING_API_LEVEL := 33
 PRODUCT_SHIPPING_API_LEVEL := 34
 
 # App compat
-PRODUCT_PACKAGES += \
-    compat_framework_overrides.xml
+#PRODUCT_PACKAGES += \
+#    compat_framework_overrides.xml
 
 # Audio
 SOONG_CONFIG_NAMESPACES += android_hardware_audio
@@ -156,9 +157,9 @@ PRODUCT_PACKAGES += \
     lib_bt_bundle
     
 # Boot control
-PRODUCT_PACKAGES += \
-    android.hardware.boot-service.qti \
-    android.hardware.boot-service.qti.recovery
+#PRODUCT_PACKAGES += \
+#    android.hardware.boot-service.qti \
+#    android.hardware.boot-service.qti.recovery
 
 # Camera
 #PRODUCT_PACKAGES += \
@@ -180,11 +181,10 @@ PRODUCT_PACKAGES += \
     libemutls_get_address
 
 # Display
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.mapper@4.0-impl-qti-display \
-    vendor.qti.hardware.display.demura-service \
-    vendor.qti.hardware.display.allocator-service \
-    vendor.qti.hardware.display.composer-service
+#PRODUCT_PACKAGES += \
+#    vendor.qti.hardware.display.demura-service \
+#    vendor.qti.hardware.display.allocator-service \
+#    vendor.qti.hardware.display.composer-service
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -203,8 +203,8 @@ PRODUCT_PACKAGES += \
 #PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.m2468
 
-PRODUCT_PACKAGES += \
-    libudfpshandler
+#PRODUCT_PACKAGES += \
+#    libudfpshandler
 
 PRODUCT_PACKAGES += \
     android.hardware.fingerprint.prebuilt.xml
@@ -214,20 +214,18 @@ PRODUCT_PACKAGES += \
     android.hardware.location.gps.prebuilt.xml
 
 # Fstab
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/charger_fstab.qti:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/etc/charger_fstab.qti \
-    $(LOCAL_PATH)/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom \
-    $(LOCAL_PATH)/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/charger_fstab.qti:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/etc/charger_fstab.qti \
+#    $(LOCAL_PATH)/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom \
+#    $(LOCAL_PATH)/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.common-V5-ndk \
     android.hardware.graphics.composer3-V2-ndk.vendor \
-    android.hardware.graphics.mapper@4.0-impl-qti-display \
-    init.qti.display_boot.rc \
     init.qti.display_boot.sh \
     vendor.qti.hardware.display.allocator-service \
-    vendor.qti.hardware.display.composer-service.rc \
+    vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.display.composer-service.xml \
     vendor.qti.hardware.display.demura-service
 
@@ -260,17 +258,12 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-service
 
 # Init
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/init.sm8550.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.sm8550.rc \
-    $(LOCAL_PATH)/init/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/init/init.sm8550.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.sm8550.rc \
+#    $(LOCAL_PATH)/init/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc
 
 # IPA
 $(call inherit-product, hardware/qcom-caf/sm8550/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
-
-PRODUCT_PACKAGES += \
-    ipacm \
-    IPACM_Filter_cfg.xml \
-    IPACM_cfg.xml
 
 # IR
 PRODUCT_PACKAGES += \
@@ -321,9 +314,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service
 
 # ModemManager
-PRODUCT_PACKAGES += \
-    libqesdk_manager_32bit_stub \
-    libqesdk2_0_32bit_stub
+#PRODUCT_PACKAGES += \
+#    libqesdk_manager_32bit_stub \
+#    libqesdk2_0_32bit_stub
 
 # Mount point
 PRODUCT_PACKAGES += \
@@ -361,8 +354,11 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
+#PRODUCT_PACKAGES += \
+#    android.hardware.power-service-qti
+
+PRODUCT_COPY_FILES += \
+    vendor/qcom/opensource/power/config/pineapple/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
 # PowerShare
 #PRODUCT_PACKAGES += \
@@ -429,7 +425,6 @@ PRODUCT_PACKAGES += \
     init.qcom.sensors.sh \
     init.qcom.sh \
     init.qcom.usb.sh \
-    init.qti.display_boot.sh \
     init.qti.kernel.debug-kalama.sh \
     init.qti.kernel.debug.sh \
     init.qti.kernel.early_debug-kalama.sh \
@@ -502,8 +497,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.mbms.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.mbms.xml
 
 # Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal-service.qti
+#PRODUCT_PACKAGES += \
+#    android.hardware.thermal-service.qti
 
 # Touchscreen
 PRODUCT_COPY_FILES += \
@@ -546,7 +541,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
 
 # VNDK
-PRODUCT_EXTRA_VNDK_VERSIONS := 33
+PRODUCT_EXTRA_VNDK_VERSIONS := 30 31 32 33 34
 TARGET_FLATTEN_APEX := false
 
 # WiFi
@@ -554,7 +549,6 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     wpa_cli \
     wpa_supplicant \
-    wpa_supplicant.conf \
     hostapd \
     hostapd_cli \
     libwifi-hal-ctrl \
@@ -572,7 +566,6 @@ PRODUCT_COPY_FILES += \
 
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \
-    firmware_wlanmdsp.otaupdate_symlink \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
 

@@ -98,9 +98,9 @@ BOARD_BOOTCONFIG := \
     androidboot.load_modules_parallel=true \
     androidboot.console=ttyMSM0
 
-BOARD_BOOTIMG_HEADER_VERSION := 4
+BOARD_BOOT_HEADER_VERSION := 4
 BOARD_INIT_BOOT_HEADER_VERSION := 4
-BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 
 BOARD_KERNEL_IMAGE_NAME := Image
@@ -149,13 +149,8 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(KERNEL_PATH)/vendor_ramdisk/,$(TARGET_COPY_OUT_VENDOR_RAMDISK)/lib/modules)
 #    $(call find-copy-subdir-files,*,$(KERNEL_PATH)/system_dlkm/,$(TARGET_COPY_OUT_SYSTEM_DLKM)/lib/modules/6.1.79-android14-11-maybe-dirty)
 
-PRODUCT_COPY_FILES += \
-    $(KERNEL_PATH)/vendor_dlkm/q6_pdr_dlkm.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/q6_pdr_dlkm.ko \
-    $(KERNEL_PATH)/vendor_dlkm/q6_notifier_dlkm.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/q6_notifier_dlkm.ko \
-    $(KERNEL_PATH)/vendor_dlkm/snd_event_dlkm.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/snd_event_dlkm.ko \
-    $(KERNEL_PATH)/vendor_dlkm/gpr_dlkm.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/gpr_dlkm.ko \
-    $(KERNEL_PATH)/vendor_dlkm/spf_core_dlkm.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/spf_core_dlkm.ko \
-    $(KERNEL_PATH)/vendor_dlkm/adsp_loader_dlkm.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/adsp_loader_dlkm.ko
+# Recovery modules are handled via BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD
+# which automatically pulls modules from modules.load.recovery
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true

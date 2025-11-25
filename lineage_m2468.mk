@@ -23,6 +23,5 @@ PRODUCT_MANUFACTURER := Meizu
 PRODUCT_GMS_CLIENTID_BASE := android-meizu
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="qssi-user 15 AQ3A.250129.001 1737086932 release-keys"
-
-BUILD_FINGERPRINT := meizu/Meizu_21Note_CN/Meizu21Note:15/AQ3A.241229.001/1737086932:user/release-keys
+    BuildDesc="qssi-user 15 AQ3A.250129.001 1737086932 release-keys" \
+    BuildFingerprint="meizu/Meizu_21Note_CN/Meizu21Note:15/AQ3A.241229.001/1737086932:user/release-keys"
