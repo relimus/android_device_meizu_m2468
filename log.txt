@@ -1,0 +1,609 @@
+[ 93% 140/150 1m36s remaining] Target chained vbmeta image: out/target/product/m2468/vbmeta_system.img
+FAILED: out/target/product/m2468/vbmeta_system.img
+/bin/bash -c "out/host/linux-x86/bin/avbtool make_vbmeta_image --algorithm SHA256_RSA4096 --key external/avb/test/data/testkey_rsa4096.pem --padding_size 4096 --rollback_index 1761955200  --include_descriptors_fr
+om_image out/target/product/m2468/system.img  --include_descriptors_from_image   --include_descriptors_from_image   --include_descriptors_from_image  --output out/target/product/m2468/vbmeta_system.img"
+usage: avbtool make_vbmeta_image [-h] [--output OUTPUT]
+                                 [--padding_size NUMBER]
+                                 [--algorithm ALGORITHM] [--key KEY]
+                                 [--signing_helper APP]
+                                 [--signing_helper_with_files APP]
+                                 [--public_key_metadata KEY_METADATA]
+                                 [--rollback_index ROLLBACK_INDEX]
+                                 [--rollback_index_location ROLLBACK_INDEX_LOCATION]
+                                 [--append_to_release_string STR]
+                                 [--prop KEY:VALUE]
+                                 [--prop_from_file KEY:PATH]
+                                 [--kernel_cmdline CMDLINE]
+                                 [--setup_rootfs_from_kernel IMAGE]
+                                 [--include_descriptors_from_image IMAGE]
+                                 [--print_required_libavb_version]
+                                 [--chain_partition PART_NAME:ROLLBACK_SLOT:KEY_PATH]
+                                 [--chain_partition_do_not_use_ab PART_NAME:ROLLBACK_SLOT:KEY_PATH]
+                                 [--flags FLAGS]
+                                 [--set_hashtree_disabled_flag]
+                                 [--set_verification_disabled_flag]
+avbtool make_vbmeta_image: error: argument --include_descriptors_from_image: expected one argument
+[ 94% 141/150 1m36s remaining] build out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/check_all_partition_sizes.log
+FAILED: out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/check_all_partition_sizes.log
+/bin/bash -c "(mkdir -p out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/ ) && (rm -f  out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_info.txt ) 
+&& (echo \"use_dynamic_partitions=true\" >>   out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_info.txt ) && (echo \"lpmake=lpmake\" >>   out/target/product/m2468/obj/PACKAGING/
+check-all-partition-sizes_intermediates/misc_info.txt ) && (echo \"build_super_partition=true\" >>   out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_info.txt ) && (echo \"build
+_super_empty_partition=true\" >>   out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_info.txt ) && (echo \"super_metadata_device=super\" >>   out/target/product/m2468/obj/PACKAGI
+NG/check-all-partition-sizes_intermediates/misc_info.txt ) && (echo \"super_block_devices=super\" >>   out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_info.txt ) && (echo \"sup
+er_super_device_size=9126805504\" >>   out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_info.txt ) && (echo \"dynamic_partition_list=product system system_ext\" >>   out/target/
+product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_info.txt ) && (echo \"super_partition_groups=qti_dynamic_partitions\" >>   out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes
+_intermediates/misc_info.txt ) && (echo \"super_qti_dynamic_partitions_group_size=9122611200\" >>   out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_info.txt;  echo \"super_qti_
+dynamic_partitions_partition_list=product system system_ext\" >>   out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_info.txt ) && (echo \"super_partition_size=9126805504\" >>   
+out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_info.txt ) && (echo \"virtual_ab=true\" >>   out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc
+_info.txt ) && (echo \"virtual_ab_compression=true\" >>   out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_info.txt ) && (echo \"virtual_ab_compression_method=lz4\" >>   out/tar
+get/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_info.txt ) && (echo \"virtual_ab_cow_version=3\" >>   out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/mi
+sc_info.txt ) && (echo \"virtual_ab_compression_factor=65536\" >>   out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_info.txt ) && (echo \"ab_update=true\" >>   out/target/produ
+ct/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_info.txt ) && (echo \"odm_image=\" >>  out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_info.txt;  echo \"pro
+duct_image=\" >>  out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_info.txt;  echo \"system_image=\"out/target/product/m2468/system.img >>  out/target/product/m2468/obj/PACKAGIN
+G/check-all-partition-sizes_intermediates/misc_info.txt;  echo \"system_dlkm_image=\" >>  out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_info.txt;  echo \"system_ext_image=\" 
+>>  out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_info.txt;  echo \"vendor_image=\" >>  out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_in
+fo.txt;  echo \"vendor_dlkm_image=\" >>  out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_info.txt ) && (out/host/linux-x86/bin/check_partition_sizes --logfile  out/target/produ
+ct/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/check_all_partition_sizes.log  out/target/product/m2468/obj/PACKAGING/check-all-partition-sizes_intermediates/misc_info.txt )"
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/relimus/lineage/out/host/linux-x86/bin/check_partition_sizes/__main__.py", line 12, in <module>
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "check_partition_sizes.py", line 302, in <module>
+  File "check_partition_sizes.py", line 296, in main
+  File "check_partition_sizes.py", line 284, in CheckPartitionSizes
+  File "check_partition_sizes.py", line 276, in Run
+  File "check_partition_sizes.py", line 233, in _CheckAllPartitionSizes
+  File "check_partition_sizes.py", line 163, in _CheckSumOfPartitionSizes
+  File "check_partition_sizes.py", line 164, in <listcomp>
+  File "check_partition_sizes.py", line 139, in _ReadSizeOfPartition
+  File "sparse_img.py", line 348, in GetImagePartitionSize
+  File "sparse_img.py", line 45, in __init__
+FileNotFoundError: [Errno 2] No such file or directory: ''
+
+[ 94% 142/150 4s remaining] Building target files: out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files.zip.list
+FAILED: out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files.zip.list
+/bin/bash -c "(rm -rf out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files.zip.list out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_f
+iles.zip.list.list out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files ) && (mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/ out/target/product
+/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files ) && (mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RECOVERY ) && (if [ -d \"out/
+target/product/m2468/recovery/root\" -a \"\$(ls -A  out/target/product/m2468/recovery/root)\" ]; then mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RECOVERY
+/RAMDISK && prebuilts/build-tools/linux-x86/bin/acp -rd out/target/product/m2468/recovery/root/. out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RECOVERY/RAMDISK/; fi 
+) && (if [ -d \"out/target/product/m2468/install\" -a \"\$(ls -A  out/target/product/m2468/install)\" ]; then mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/
+INSTALL && prebuilts/build-tools/linux-x86/bin/acp -rd out/target/product/m2468/install/. out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/INSTALL/; fi ) && (cp out/tar
+get/product/m2468/dtb.img out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RECOVERY/dtb ) && (echo \"0x00000000\" > out/target/product/m2468/obj/PACKAGING/target_files_
+intermediates/lineage_m2468-target_files/RECOVERY/base ) && (echo \"4096\" > out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RECOVERY/pagesize ) && (mkdir -p out/targe
+t/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/BOOT ) && (mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/ROOT ) && (if [
+ -d \"out/target/product/m2468/root\" -a \"\$(ls -A  out/target/product/m2468/root)\" ]; then mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/ROOT && prebuilt
+s/build-tools/linux-x86/bin/acp -rd out/target/product/m2468/root/. out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/ROOT/; fi ) && (if [ -d \"out/target/product/m2468/
+ramdisk\" -a \"\$(ls -A  out/target/product/m2468/ramdisk)\" ]; then mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/BOOT/RAMDISK && prebuilts/build-tools/lin
+ux-x86/bin/acp -rd out/target/product/m2468/ramdisk/. out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/BOOT/RAMDISK/; fi ) && (cp out/target/product/m2468/kernel out/ta
+rget/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/BOOT/ ) && (echo \"\" > out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/BOOT/cmd
+line ) && (mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO; cp out/target/product/m2468/abl.img out/target/product/m2468/obj/PACKAGING/target_files_inte
+rmediates/lineage_m2468-target_files/RADIO/abl.img;  mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO; cp out/target/product/m2468/aop.img out/target/pro
+duct/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO/aop.img;  mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO; cp out/t
+arget/product/m2468/aop_config.img out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO/aop_config.img;  mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_
+intermediates/lineage_m2468-target_files/RADIO; cp out/target/product/m2468/bluetooth.img out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO/bluetooth.img;  mkdir -
+p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO; cp out/target/product/m2468/cpucp.img out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineag
+e_m2468-target_files/RADIO/cpucp.img;  mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO; cp out/target/product/m2468/devcfg.img out/target/product/m2468/
+obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO/devcfg.img;  mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO; cp out/target/pr
+oduct/m2468/dsp.img out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO/dsp.img;  mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_
+m2468-target_files/RADIO; cp out/target/product/m2468/erf.img out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO/erf.img;  mkdir -p out/target/product/m2468/obj/PAC
+KAGING/target_files_intermediates/lineage_m2468-target_files/RADIO; cp out/target/product/m2468/featenabler.img out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO/f
+eatenabler.img;  mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO; cp out/target/product/m2468/hyp.img out/target/product/m2468/obj/PACKAGING/target_file
+s_intermediates/lineage_m2468-target_files/RADIO/hyp.img;  mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO; cp out/target/product/m2468/imagefv.img out/
+target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO/imagefv.img;  mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/R
+ADIO; cp out/target/product/m2468/keymaster.img out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO/keymaster.img;  mkdir -p out/target/product/m2468/obj/PACKAGING/t
+arget_files_intermediates/lineage_m2468-target_files/RADIO; cp out/target/product/m2468/logo.img out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO/logo.img;  mkdir
+ -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO; cp out/target/product/m2468/modem.img out/target/product/m2468/obj/PACKAGING/target_files_intermediates/line
+age_m2468-target_files/RADIO/modem.img;  mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO; cp out/target/product/m2468/qupfw.img out/target/product/m2468
+/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO/qupfw.img;  mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO; cp out/target/pr
+oduct/m2468/shrm.img out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO/shrm.img;  mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineag
+e_m2468-target_files/RADIO; cp out/target/product/m2468/tz.img out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO/tz.img;  mkdir -p out/target/product/m2468/obj/PAC
+KAGING/target_files_intermediates/lineage_m2468-target_files/RADIO; cp out/target/product/m2468/uefi.img out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO/uefi.img
+;  mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO; cp out/target/product/m2468/uefisecapp.img out/target/product/m2468/obj/PACKAGING/target_files_inter
+mediates/lineage_m2468-target_files/RADIO/uefisecapp.img;  mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO; cp out/target/product/m2468/xbl.img out/targ
+et/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO/xbl.img;  mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO; cp
+ out/target/product/m2468/xbl_config.img out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO/xbl_config.img;  mkdir -p out/target/product/m2468/obj/PACKAGING/target_
+files_intermediates/lineage_m2468-target_files/RADIO; cp out/target/product/m2468/xbl_ramdump.img out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RADIO/xbl_ramdump.img
+ ) && (mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/VENDOR_BOOT ) && (if [ -d \"out/target/product/m2468/vendor_ramdisk\" -a \"\$(ls -A  out/target/product
+/m2468/vendor_ramdisk)\" ]; then mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/VENDOR_BOOT/RAMDISK && prebuilts/build-tools/linux-x86/bin/acp -rd out/target
+/product/m2468/vendor_ramdisk/. out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/VENDOR_BOOT/RAMDISK/; fi ) && (cp out/target/product/m2468/dtb.img out/target/product/m
+2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/VENDOR_BOOT/dtb ) && (cp out/target/product/m2468/vendor-bootconfig.img out/target/product/m2468/obj/PACKAGING/target_files_intermediates/l
+ineage_m2468-target_files/VENDOR_BOOT/vendor_bootconfig ) && (echo \"0x00000000\" > out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/VENDOR_BOOT/base ) && (echo \"4096\
+" > out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/VENDOR_BOOT/pagesize ) && (echo \"video=vfb:640x400,bpp=32,memsize=3072000 swinfo.fingerprint=22.2-20251129-UNOFFIC
+IAL-m2468 mtdoops.fingerprint=22.2-20251129-UNOFFICIAL-m2468 console=ttyMSM0,115200n8 earlycon qcom_geni_serial.con_enabled=1 nosoftlockup page_poison=1 sysrq_always_enabled androidboot.selinux=permissive bootcon
+fig\" > out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/VENDOR_BOOT/vendor_cmdline ) && (if [ -d \"out/target/product/m2468/system\" -a \"\$(ls -A  out/target/product/
+m2468/system)\" ]; then mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM && prebuilts/build-tools/linux-x86/bin/acp -rd out/target/product/m2468/system/
+. out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/; fi ) && (mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_fil
+es/OTA ) && (cp out/target/product/m2468/android-info.txt out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/OTA/ ) && (cp out/target/product/m2468/android-info-extra.txt
+ out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/OTA/ ) && (mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META 
+) && (cp out/target/product/m2468/obj/PACKAGING/apkcerts_intermediates/lineage_m2468-apkcerts.txt out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/apkcerts.txt ) &
+& (cp out/target/product/m2468/obj/PACKAGING/apexkeys_intermediates/apexkeys.txt out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/apexkeys.txt ) && (echo \"\" > ou
+t/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/otakeys.txt ) && (cp out/target/product/m2468/obj/ETC/file_contexts.bin_intermediates/file_contexts.bin out/target/p
+roduct/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/file_contexts.bin ) && (cp out/target/product/m2468/misc_info.txt out/target/product/m2468/obj/PACKAGING/target_files_intermed
+iates/lineage_m2468-target_files/META/misc_info.txt ) && (cp out/target/product/m2468/fastboot-info.txt out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/fastboot-i
+nfo.txt ) && (cp system/update_engine/update_engine.conf out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/update_engine_config.txt ) && (cp external/zucchini/versi
+on_info.h out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/zucchini_config.txt ) && (cp out/host/linux-x86/lib64/liblz4.so out/target/product/m2468/obj/PACKAGING/t
+arget_files_intermediates/lineage_m2468-target_files/META/liblz4.so ) && (for part in abl aop aop_config bluetooth boot cpucp devcfg dsp dtbo erf featenabler hyp imagefv init_boot keymaster logo modem odm product
+ qupfw recovery shrm system system_dlkm system_ext tz uefi uefisecapp vbmeta vbmeta_system vendor vendor_boot vendor_dlkm xbl xbl_config xbl_ramdump; do 	  echo \"\${part}\" >> out/target/product/m2468/obj/
+PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/ab_partitions.txt; 	done ) && (for conf in RUN_POSTINSTALL_system=true POSTINSTALL_PATH_system=system/bin/otapreopt_script FILESYSTEM_TY
+PE_system=erofs POSTINSTALL_OPTIONAL_system=true RUN_POSTINSTALL_vendor=true POSTINSTALL_PATH_vendor=bin/checkpoint_gc FILESYSTEM_TYPE_vendor=erofs POSTINSTALL_OPTIONAL_vendor=true; do 	  echo \"\${conf}\" 
+>> out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/postinstall_config.txt; 	done ) && (mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediate
+s/lineage_m2468-target_files/PREBUILT_IMAGES ) && (cp out/target/product/m2468/dtbo.img out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/PREBUILT_IMAGES/ ) && ((cd out/
+target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM; find . -type d | sed 's,\$,/,'; find . \\! -type d) | cut -c 3- | sort | sed 's,^,system/,' | out/host/linux-x86/bi
+n/fs_config -C -D out/target/product/m2468/system -R \"system/\" > out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/filesystem_config.txt ) && ((cd out/target/prod
+uct/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/ROOT; find . -type d | sed 's,\$,/,'; find . \\! -type d) | cut -c 3- | sort | sed 's,^,,' | out/host/linux-x86/bin/fs_config -C -D ou
+t/target/product/m2468/system -R \"\" > out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/root_filesystem_config.txt ) && ((cd out/target/product/m2468/obj/PACKAGIN
+G/target_files_intermediates/lineage_m2468-target_files/BOOT/RAMDISK; find . -type d | sed 's,\$,/,'; find . \\! -type d) | cut -c 3- | sort | sed 's,^,,' | out/host/linux-x86/bin/fs_config -C -D out/target/produ
+ct/m2468/system -R \"\" > out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/boot_filesystem_config.txt ) && (if [ -d \"out/target/product/m2468/ramdisk\" -a \"\$(ls
+ -A  out/target/product/m2468/ramdisk)\" ]; then mkdir -p out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/INIT_BOOT/RAMDISK && prebuilts/build-tools/linux-x86/bin/acp 
+-rd out/target/product/m2468/ramdisk/. out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/INIT_BOOT/RAMDISK/; fi ) && ((cd out/target/product/m2468/obj/PACKAGING/target_f
+iles_intermediates/lineage_m2468-target_files/INIT_BOOT/RAMDISK; find . -type d | sed 's,\$,/,'; find . \\! -type d) | cut -c 3- | sort | sed 's,^,,' | out/host/linux-x86/bin/fs_config -C -D out/target/product/m2
+468/system -R \"\" > out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/init_boot_filesystem_config.txt ) && (cp system/core/rootdir/ramdisk_node_list out/target/pro
+duct/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/ramdisk_node_list ) && (echo \"4096\" > out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_f
+iles/INIT_BOOT/pagesize ) && ((cd out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/VENDOR_BOOT/RAMDISK; find . -type d | sed 's,\$,/,'; find . \\! -type d) | cut -c 3- 
+| sort | sed 's,^,,' | out/host/linux-x86/bin/fs_config -C -D out/target/product/m2468/system -R \"\" > out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/vendor_boo
+t_filesystem_config.txt ) && ((cd out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RECOVERY/RAMDISK; find . -type d | sed 's,\$,/,'; find . \\! -type d) | cut -c 3- | s
+ort | sed 's,^,,' | out/host/linux-x86/bin/fs_config -C -D out/target/product/m2468/system -R \"\" > out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/recovery_file
+system_config.txt ) && (cp out/target/product/m2468/obj/PACKAGING/check_vintf_all_intermediates/kernel_configs.txt out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META
+/kernel_configs.txt ) && (cp out/target/product/m2468/obj/PACKAGING/check_vintf_all_intermediates/kernel_version.txt out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/ME
+TA/kernel_version.txt ) && (rm -rf out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/dynamic_partitions_info.txt ) && (echo \"use_dynamic_partitions=true\" >>  out/
+target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/dynamic_partitions_info.txt ) && (echo \"lpmake=lpmake\" >>  out/target/product/m2468/obj/PACKAGING/target_files_inter
+mediates/lineage_m2468-target_files/META/dynamic_partitions_info.txt ) && (echo \"build_super_partition=true\" >>  out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META
+/dynamic_partitions_info.txt ) && (echo \"build_super_empty_partition=true\" >>  out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/dynamic_partitions_info.txt ) && 
+(echo \"super_metadata_device=super\" >>  out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/dynamic_partitions_info.txt ) && (echo \"super_block_devices=super\" >> 
+ out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/dynamic_partitions_info.txt ) && (echo \"super_super_device_size=9126805504\" >>  out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/META/dynamic_partitions_info.txt ) && (echo \"dynamic_partition_list=product system system_ext\" >>  out/target/product/m2468/obj/PACKAGING/target_fil
+es_intermediates/lineage_m2468-target_files/META/dynamic_partitions_info.txt ) && (echo \"super_partition_groups=qti_dynamic_partitions\" >>  out/target/product/m2468/obj/PACKAGING/target_files_intermediates/line
+age_m2468-target_files/META/dynamic_partitions_info.txt ) && (echo \"super_qti_dynamic_partitions_group_size=9122611200\" >>  out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target
+_files/META/dynamic_partitions_info.txt;  echo \"super_qti_dynamic_partitions_partition_list=product system system_ext\" >>  out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_
+files/META/dynamic_partitions_info.txt ) && (echo \"super_partition_size=9126805504\" >>  out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/dynamic_partitions_info.
+txt ) && (echo \"virtual_ab=true\" >>  out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/dynamic_partitions_info.txt ) && (echo \"virtual_ab_compression=true\" >>  
+out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/dynamic_partitions_info.txt ) && (echo \"virtual_ab_compression_method=lz4\" >>  out/target/product/m2468/obj/PACK
+AGING/target_files_intermediates/lineage_m2468-target_files/META/dynamic_partitions_info.txt ) && (echo \"virtual_ab_cow_version=3\" >>  out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m
+2468-target_files/META/dynamic_partitions_info.txt ) && (echo \"virtual_ab_compression_factor=65536\" >>  out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/dynamic_
+partitions_info.txt ) && (PATH=out/host/linux-x86/bin/:system/extras/ext4_utils/:\$PATH MKBOOTIMG=out/host/linux-x86/bin/mkbootimg 	    out/host/linux-x86/bin/add_img_to_target_files -a -v -p out/host/linux-x
+86 out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files ) && (find out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META | sort 
+>out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files.zip.list ) && (find out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files -path
+ out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META -prune -o -print | sort >>out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_
+files.zip.list )"
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read SYSTEM/etc/build.prop
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read VENDOR/etc/build.prop
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read VENDOR/build.prop
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read build.prop for partition vendor
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read PRODUCT/etc/build.prop
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read PRODUCT/build.prop
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read build.prop for partition product
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read SYSTEM_EXT/etc/build.prop
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read SYSTEM_EXT/build.prop
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read build.prop for partition system_ext
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read ODM/etc/build.prop
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read ODM/build.prop
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read build.prop for partition odm
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read VENDOR_DLKM/etc/build.prop
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read VENDOR_DLKM/build.prop
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read build.prop for partition vendor_dlkm
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read ODM_DLKM/etc/build.prop
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read ODM_DLKM/build.prop
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read build.prop for partition odm_dlkm
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read SYSTEM_DLKM/etc/build.prop
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read SYSTEM_DLKM/build.prop
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read build.prop for partition system_dlkm
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read IMAGES/boot.img
+2025-11-29 18:15:39 - common.py - WARNING : Failed to read IMAGES/init_boot.img
+2025-11-29 18:15:39 - add_img_to_target_files.py - INFO    : 
+
+++++ boot  ++++
+
+
+2025-11-29 18:15:39 - common.py - INFO    : building image from target_files BOOT...
+2025-11-29 18:15:39 - common.py - INFO    :   Running: "out/host/linux-x86/bin/mkbootimg --kernel /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files
+/BOOT/kernel --cmdline  --header_version 4 --os_version 15 --os_patch_level 2025-11-01 --output /home/relimus/lineage/out/soong/.temp/tmp9jqnmv95"
+2025-11-29 18:15:39 - common.py - INFO    : 
+2025-11-29 18:15:39 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/avbtool add_hash_footer --image /home/relimus/lineage/out/soong/.temp/tmp9jqnmv95 --partition_size 100663296 --
+partition_name boot --key external/avb/test/data/testkey_rsa4096.pem --algorithm SHA256_RSA4096 --salt 820b397f0c52f8f2a28909b3df010eb3b2dd6f3f2dd2db08434a49fe9b83a903 --prop com.android.build.boot.os_version:15 
+--prop com.android.build.boot.fingerprint:Meizu/lineage_m2468/m2468:15/BP1A.250505.005/eng.relimu:userdebug/test-keys --rollback_index 1761955200"
+2025-11-29 18:15:40 - common.py - INFO    : 
+2025-11-29 18:15:40 - add_img_to_target_files.py - INFO    : 
+
+++++ init_boot  ++++
+
+
+2025-11-29 18:15:40 - common.py - INFO    : building image from target_files INIT_BOOT...
+2025-11-29 18:15:40 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/mkbootfs -f /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m24
+68-target_files/META/init_boot_filesystem_config.txt -n /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/ramdisk_node_list /home/relimus/line
+age/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/INIT_BOOT/RAMDISK"
+2025-11-29 18:15:40 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/lz4 -l -12 --favor-decSpeed"
+2025-11-29 18:15:41 - common.py - INFO    :   Running: "out/host/linux-x86/bin/mkbootimg --pagesize 4096 --header_version 4 --os_version 15 --os_patch_level 2025-11-01 --ramdisk /home/relimus/lineage/out/soong/.t
+emp/tmp7fs0zb84 --output /home/relimus/lineage/out/soong/.temp/tmp99v0wxxe"
+2025-11-29 18:15:41 - common.py - INFO    : 
+2025-11-29 18:15:41 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/avbtool add_hash_footer --image /home/relimus/lineage/out/soong/.temp/tmp99v0wxxe --partition_size 8388608 --pa
+rtition_name init_boot --salt 218f9449bfebcbf5a7d814b5526d7b59b2898fee7d5f1e9666285e2381db5875 --prop com.android.build.init_boot.os_version:15 --prop com.android.build.init_boot.fingerprint:Meizu/lineage_m2468/m
+2468:15/BP1A.250505.005/eng.relimu:userdebug/test-keys"
+2025-11-29 18:15:41 - common.py - INFO    : 
+2025-11-29 18:15:41 - add_img_to_target_files.py - INFO    : 
+
+++++ vendor_boot  ++++
+
+
+2025-11-29 18:15:41 - common.py - INFO    : building image from target_files VENDOR_BOOT...
+2025-11-29 18:15:41 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/mkbootfs -f /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m24
+68-target_files/META/vendor_boot_filesystem_config.txt /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/VENDOR_BOOT/RAMDISK"
+2025-11-29 18:15:41 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/lz4 -l -12 --favor-decSpeed"
+2025-11-29 18:15:52 - common.py - INFO    :   Running: "out/host/linux-x86/bin/mkbootimg --dtb /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/VE
+NDOR_BOOT/dtb --vendor_cmdline video=vfb:640x400,bpp=32,memsize=3072000 swinfo.fingerprint=22.2-20251129-UNOFFICIAL-m2468 mtdoops.fingerprint=22.2-20251129-UNOFFICIAL-m2468 console=ttyMSM0,115200n8 earlycon qcom_
+geni_serial.con_enabled=1 nosoftlockup page_poison=1 sysrq_always_enabled androidboot.selinux=permissive bootconfig --base 0x00000000 --pagesize 4096 --header_version 4 --os_version 15 --os_patch_level 2025-11-01
+ --vendor_ramdisk /home/relimus/lineage/out/soong/.temp/tmphakvhbkk --vendor_boot /home/relimus/lineage/out/soong/.temp/tmpt23pt3de --vendor_bootconfig /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING
+/target_files_intermediates/lineage_m2468-target_files/VENDOR_BOOT/vendor_bootconfig"
+2025-11-29 18:15:52 - common.py - INFO    : 
+2025-11-29 18:15:52 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/avbtool add_hash_footer --image /home/relimus/lineage/out/soong/.temp/tmpt23pt3de --partition_size 100663296 --
+partition_name vendor_boot --salt 218f9449bfebcbf5a7d814b5526d7b59b2898fee7d5f1e9666285e2381db5875 --prop com.android.build.vendor_boot.fingerprint:Meizu/lineage_m2468/m2468:15/BP1A.250505.005/eng.relimu:userdebu
+g/test-keys"
+2025-11-29 18:15:53 - common.py - INFO    : 
+2025-11-29 18:15:55 - add_img_to_target_files.py - INFO    : 
+
+++++ recovery  ++++
+
+
+2025-11-29 18:15:55 - common.py - INFO    : building image from target_files RECOVERY...
+2025-11-29 18:15:55 - common.py - INFO    : Excluded kernel binary from recovery image.
+2025-11-29 18:15:55 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/mkbootfs -f /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m24
+68-target_files/META/recovery_filesystem_config.txt /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RECOVERY/RAMDISK"
+2025-11-29 18:15:55 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/lz4 -l -12 --favor-decSpeed"
+2025-11-29 18:15:59 - common.py - INFO    :   Running: "out/host/linux-x86/bin/mkbootimg --dtb /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RE
+COVERY/dtb --base 0x00000000 --pagesize 4096 --header_version 4 --os_version 15 --os_patch_level 2025-11-01 --ramdisk /home/relimus/lineage/out/soong/.temp/tmp6c_teehb --output /home/relimus/lineage/out/soong/.te
+mp/tmpzmidf56i"
+2025-11-29 18:16:00 - common.py - INFO    : 
+2025-11-29 18:16:00 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/avbtool add_hash_footer --image /home/relimus/lineage/out/soong/.temp/tmpzmidf56i --partition_size 104857600 --
+partition_name recovery --key external/avb/test/data/testkey_rsa4096.pem --algorithm SHA256_RSA4096 --salt 218f9449bfebcbf5a7d814b5526d7b59b2898fee7d5f1e9666285e2381db5875 --prop com.android.build.recovery.finger
+print:Meizu/lineage_m2468/m2468:15/BP1A.250505.005/eng.relimu:userdebug/test-keys --rollback_index 1761955200"
+2025-11-29 18:16:00 - common.py - INFO    : 
+2025-11-29 18:16:02 - add_img_to_target_files.py - INFO    : 
+
+++++ recovery (two-step image)  ++++
+
+
+2025-11-29 18:16:02 - common.py - INFO    : building image from target_files RECOVERY...
+2025-11-29 18:16:02 - common.py - INFO    : Excluded kernel binary from recovery image.
+2025-11-29 18:16:02 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/mkbootfs -f /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m24
+68-target_files/META/recovery_filesystem_config.txt /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RECOVERY/RAMDISK"
+2025-11-29 18:16:02 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/lz4 -l -12 --favor-decSpeed"
+2025-11-29 18:16:06 - common.py - INFO    :   Running: "out/host/linux-x86/bin/mkbootimg --dtb /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/RE
+COVERY/dtb --base 0x00000000 --pagesize 4096 --header_version 4 --os_version 15 --os_patch_level 2025-11-01 --ramdisk /home/relimus/lineage/out/soong/.temp/tmpj7p35fsk --output /home/relimus/lineage/out/soong/.te
+mp/tmpdx7xn7x9"
+2025-11-29 18:16:06 - common.py - INFO    : 
+2025-11-29 18:16:06 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/avbtool add_hash_footer --image /home/relimus/lineage/out/soong/.temp/tmpdx7xn7x9 --partition_size 104857600 --
+partition_name recovery --key external/avb/test/data/testkey_rsa4096.pem --algorithm SHA256_RSA4096 --salt 218f9449bfebcbf5a7d814b5526d7b59b2898fee7d5f1e9666285e2381db5875 --prop com.android.build.recovery.finger
+print:Meizu/lineage_m2468/m2468:15/BP1A.250505.005/eng.relimu:userdebug/test-keys --rollback_index 1761955200"
+2025-11-29 18:16:07 - common.py - INFO    : 
+2025-11-29 18:16:09 - add_img_to_target_files.py - INFO    : 
+
+++++ system  ++++
+
+
+2025-11-29 18:16:09 - add_img_to_target_files.py - INFO    : creating system.img...
+2025-11-29 18:17:36 - build_image.py - INFO    : Using fingerprint Meizu/lineage_m2468/m2468:15/BP1A.250505.005/eng.relimu:userdebug/test-keys for partition /
+2025-11-29 18:17:36 - build_image.py - INFO    : The tree size of /home/relimus/lineage/out/soong/.temp/tmpajzud41z is 3802 MB.
+2025-11-29 18:17:36 - build_image.py - INFO    : First Pass based on estimates of 4198 MB and 11843 inodes.
+2025-11-29 18:17:36 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/mkuserimg_mke2fs /home/relimus/lineage/out/soong/.temp/tmpajzud41z /home/relimus/lineage/out/target/product/m24
+68/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/IMAGES/system.img ext4 / 4402831360 -j 0 -T 1230768000 -C /home/relimus/lineage/out/soong/.temp/merged_fs_configjnc1_1bc.txt -B /home/relimus
+/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/IMAGES/system.map -L / -i 11843 -M 0 -U d9861619-0099-557d-bd20-200700654ec2 -S eb4dddca-d535-5ba0-8978-cc4fb2
+e7c61e --inode_size 256 /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/file_contexts.bin"
+2025-11-29 18:19:01 - common.py - INFO    : 18:17:36 mkuserimg_mke2fs.py INFO: Env: {'MKE2FS_CONFIG': '/home/relimus/lineage/out/soong/.temp/tmpij1jmbtc', 'E2FSPROGS_FAKE_TIME': '1230768000'}
+18:17:36 mkuserimg_mke2fs.py INFO: Running: /home/relimus/lineage/out/host/linux-x86/bin/mke2fs -O ^has_journal -L / -N 11843 -I 256 -M / -m 0 -U d9861619-0099-557d-bd20-200700654ec2 -E hash_seed=eb4dddca-d535-5b
+a0-8978-cc4fb2e7c61e -t ext4 -b 4096 /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/IMAGES/system.img 1074910
+18:17:41 mkuserimg_mke2fs.py INFO: Env: {'E2FSPROGS_FAKE_TIME': '1230768000'}
+18:17:41 mkuserimg_mke2fs.py INFO: Running: /home/relimus/lineage/out/host/linux-x86/bin/e2fsdroid -e -T 1230768000 -C /home/relimus/lineage/out/soong/.temp/merged_fs_configjnc1_1bc.txt -B /home/relimus/lineage/o
+ut/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/IMAGES/system.map -S /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m24
+68-target_files/META/file_contexts.bin -f /home/relimus/lineage/out/soong/.temp/tmpajzud41z -a / /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/
+IMAGES/system.img
+mke2fs 1.46.6 (1-Feb-2023)
+Creating filesystem with 1074910 4k blocks and 12144 inodes
+Filesystem UUID: d9861619-0099-557d-bd20-200700654ec2
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736
+
+Allocating group tables: done                            
+Writing inode tables: done                            
+Writing superblocks and filesystem accounting information: done 
+
+
+loaded 11174 fs_config entries
+Created filesystem with 11183/12144 inodes and 960391/1074910 blocks
+2025-11-29 18:19:01 - build_image.py - INFO    : Allocating 11205 Inodes for /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/IMAGES/system.img.
+2025-11-29 18:19:01 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/avbtool add_hashtree_footer --partition_size 3945566208 --calc_max_image_size --prop com.android.build.system.o
+s_version:15 --prop com.android.build.system.fingerprint:Meizu/lineage_m2468/m2468:15/BP1A.250505.005/eng.relimu:userdebug/test-keys --prop com.android.build.system.security_patch:2025-11-01"
+2025-11-29 18:19:01 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/avbtool add_hashtree_footer --partition_size 4008902656 --calc_max_image_size --prop com.android.build.system.o
+s_version:15 --prop com.android.build.system.fingerprint:Meizu/lineage_m2468/m2468:15/BP1A.250505.005/eng.relimu:userdebug/test-keys --prop com.android.build.system.security_patch:2025-11-01"
+2025-11-29 18:19:01 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/avbtool add_hashtree_footer --partition_size 4008906752 --calc_max_image_size --prop com.android.build.system.o
+s_version:15 --prop com.android.build.system.fingerprint:Meizu/lineage_m2468/m2468:15/BP1A.250505.005/eng.relimu:userdebug/test-keys --prop com.android.build.system.security_patch:2025-11-01"
+2025-11-29 18:19:01 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/avbtool add_hashtree_footer --partition_size 4008902656 --calc_max_image_size --prop com.android.build.system.o
+s_version:15 --prop com.android.build.system.fingerprint:Meizu/lineage_m2468/m2468:15/BP1A.250505.005/eng.relimu:userdebug/test-keys --prop com.android.build.system.security_patch:2025-11-01"
+2025-11-29 18:19:02 - verity_utils.py - INFO    : CalculateMinPartitionSize(3945566208): partition_size 4008906752.
+2025-11-29 18:19:02 - build_image.py - INFO    : Allocating 3823 MB for /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/IMAGES/system.img
+2025-11-29 18:19:02 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/avbtool add_hashtree_footer --partition_size 4008906752 --calc_max_image_size --prop com.android.build.system.o
+s_version:15 --prop com.android.build.system.fingerprint:Meizu/lineage_m2468/m2468:15/BP1A.250505.005/eng.relimu:userdebug/test-keys --prop com.android.build.system.security_patch:2025-11-01"
+2025-11-29 18:19:02 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/mkuserimg_mke2fs /home/relimus/lineage/out/soong/.temp/tmpajzud41z /home/relimus/lineage/out/target/product/m24
+68/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/IMAGES/system.img ext4 / 3945566208 -j 0 -T 1230768000 -C /home/relimus/lineage/out/soong/.temp/merged_fs_configjnc1_1bc.txt -B /home/relimus
+/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/IMAGES/system.map -L / -i 11205 -M 0 -U d9861619-0099-557d-bd20-200700654ec2 -S eb4dddca-d535-5ba0-8978-cc4fb2
+e7c61e --inode_size 256 /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/META/file_contexts.bin"
+2025-11-29 18:20:02 - common.py - INFO    : 18:19:02 mkuserimg_mke2fs.py INFO: Env: {'MKE2FS_CONFIG': '/home/relimus/lineage/out/soong/.temp/tmpa154xp2r', 'E2FSPROGS_FAKE_TIME': '1230768000'}
+18:19:02 mkuserimg_mke2fs.py INFO: Running: /home/relimus/lineage/out/host/linux-x86/bin/mke2fs -O ^has_journal -L / -N 11205 -I 256 -M / -m 0 -U d9861619-0099-557d-bd20-200700654ec2 -E hash_seed=eb4dddca-d535-5b
+a0-8978-cc4fb2e7c61e -t ext4 -b 4096 /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/IMAGES/system.img 963273
+18:19:02 mkuserimg_mke2fs.py INFO: Env: {'E2FSPROGS_FAKE_TIME': '1230768000'}
+18:19:02 mkuserimg_mke2fs.py INFO: Running: /home/relimus/lineage/out/host/linux-x86/bin/e2fsdroid -e -T 1230768000 -C /home/relimus/lineage/out/soong/.temp/merged_fs_configjnc1_1bc.txt -B /home/relimus/lineage/o
+ut/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/IMAGES/system.map -S /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m24
+68-target_files/META/file_contexts.bin -f /home/relimus/lineage/out/soong/.temp/tmpajzud41z -a / /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/
+IMAGES/system.img
+mke2fs 1.46.6 (1-Feb-2023)
+Creating filesystem with 963273 4k blocks and 11520 inodes
+Filesystem UUID: d9861619-0099-557d-bd20-200700654ec2
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736
+
+Allocating group tables: done                            
+Writing inode tables: done                            
+Writing superblocks and filesystem accounting information: done 
+
+
+loaded 11174 fs_config entries
+Created filesystem with 11183/11520 inodes and 960346/963273 blocks
+2025-11-29 18:20:02 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/avbtool add_hashtree_footer --partition_size 4008906752 --partition_name system --image /home/relimus/lineage/o
+ut/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/IMAGES/system.img --salt ec7f0747217a9a20de2a421d30bcd8712b2dcc11ef1ec80b50c713ae40b3de97 --prop com.android.build.syste
+m.os_version:15 --prop com.android.build.system.fingerprint:Meizu/lineage_m2468/m2468:15/BP1A.250505.005/eng.relimu:userdebug/test-keys --prop com.android.build.system.security_patch:2025-11-01"
+2025-11-29 18:20:25 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.adbd.capex"
+2025-11-29 18:20:25 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:25 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.adbd.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-0fzcg7ig.apex"
+2025-11-29 18:20:26 - common.py - INFO    : 
+2025-11-29 18:20:26 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.adservices.capex"
+2025-11-29 18:20:26 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:26 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.adservices.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-eg4cbw5l.apex"
+2025-11-29 18:20:26 - common.py - INFO    : 
+2025-11-29 18:20:26 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.apex.cts.shim.apex"
+2025-11-29 18:20:26 - common.py - INFO    : UNCOMPRESSED
+2025-11-29 18:20:26 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.appsearch.capex"
+2025-11-29 18:20:26 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:26 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.appsearch.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-v5g5hqt0.apex"
+2025-11-29 18:20:26 - common.py - INFO    : 
+2025-11-29 18:20:26 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.art.capex"
+2025-11-29 18:20:26 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:26 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.art.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-mzbxjlg8.apex"
+2025-11-29 18:20:26 - common.py - INFO    : 
+2025-11-29 18:20:26 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.btservices.apex"
+2025-11-29 18:20:26 - common.py - INFO    : UNCOMPRESSED
+2025-11-29 18:20:26 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.cellbroadcast.capex"
+2025-11-29 18:20:26 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:26 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.cellbroadcast.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-uvumq4mr.apex"
+2025-11-29 18:20:27 - common.py - INFO    : 
+2025-11-29 18:20:27 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.configinfrastructure.capex"
+2025-11-29 18:20:27 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:27 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.configinfrastructure.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-5jh24d8m.apex"
+2025-11-29 18:20:27 - common.py - INFO    : 
+2025-11-29 18:20:27 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.conscrypt.capex"
+2025-11-29 18:20:27 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:27 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.conscrypt.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-gjyze05e.apex"
+2025-11-29 18:20:27 - common.py - INFO    : 
+2025-11-29 18:20:27 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.devicelock.apex"
+2025-11-29 18:20:27 - common.py - INFO    : UNCOMPRESSED
+2025-11-29 18:20:27 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.extservices.capex"
+2025-11-29 18:20:27 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:27 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.extservices.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-cnjhj5s9.apex"
+2025-11-29 18:20:27 - common.py - INFO    : 
+2025-11-29 18:20:27 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.healthfitness.apex"
+2025-11-29 18:20:27 - common.py - INFO    : UNCOMPRESSED
+2025-11-29 18:20:27 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.i18n.apex"
+2025-11-29 18:20:27 - common.py - INFO    : UNCOMPRESSED
+2025-11-29 18:20:27 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.ipsec.capex"
+2025-11-29 18:20:28 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:28 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.ipsec.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-sbeoj7hr.apex"
+2025-11-29 18:20:28 - common.py - INFO    : 
+2025-11-29 18:20:28 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.media.capex"
+2025-11-29 18:20:28 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:28 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.media.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-_v1v6cvs.apex"
+2025-11-29 18:20:28 - common.py - INFO    : 
+2025-11-29 18:20:28 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.media.swcodec.capex"
+2025-11-29 18:20:28 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:28 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.media.swcodec.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-z1ckdvv0.apex"
+2025-11-29 18:20:28 - common.py - INFO    : 
+2025-11-29 18:20:28 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.mediaprovider.capex"
+2025-11-29 18:20:28 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:28 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.mediaprovider.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-7kxrea__.apex"
+2025-11-29 18:20:28 - common.py - INFO    : 
+2025-11-29 18:20:28 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.neuralnetworks.capex"
+2025-11-29 18:20:28 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:28 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.neuralnetworks.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-9vunsj0y.apex"
+2025-11-29 18:20:29 - common.py - INFO    : 
+2025-11-29 18:20:29 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.nfcservices.capex"
+2025-11-29 18:20:29 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:29 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.nfcservices.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-2g8n0uga.apex"
+2025-11-29 18:20:29 - common.py - INFO    : 
+2025-11-29 18:20:29 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.ondevicepersonalization.capex"
+2025-11-29 18:20:29 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:29 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.ondevicepersonalization.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-8ly8yqpq.apex"
+2025-11-29 18:20:29 - common.py - INFO    : 
+2025-11-29 18:20:29 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.os.statsd.apex"
+2025-11-29 18:20:29 - common.py - INFO    : UNCOMPRESSED
+2025-11-29 18:20:29 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.permission.capex"
+2025-11-29 18:20:29 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:29 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.permission.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-m603godv.apex"
+2025-11-29 18:20:29 - common.py - INFO    : 
+2025-11-29 18:20:29 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.profiling.capex"
+2025-11-29 18:20:29 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:29 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.profiling.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-ny9hacui.apex"
+2025-11-29 18:20:29 - common.py - INFO    : 
+2025-11-29 18:20:29 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.resolv.capex"
+2025-11-29 18:20:29 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:29 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.resolv.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-7uffwquy.apex"
+2025-11-29 18:20:30 - common.py - INFO    : 
+2025-11-29 18:20:30 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.rkpd.apex"
+2025-11-29 18:20:30 - common.py - INFO    : UNCOMPRESSED
+2025-11-29 18:20:30 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.runtime.apex"
+2025-11-29 18:20:30 - common.py - INFO    : UNCOMPRESSED
+2025-11-29 18:20:30 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.scheduling.capex"
+2025-11-29 18:20:30 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:30 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.scheduling.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-xw20s9j1.apex"
+2025-11-29 18:20:30 - common.py - INFO    : 
+2025-11-29 18:20:30 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.sdkext.apex"
+2025-11-29 18:20:30 - common.py - INFO    : UNCOMPRESSED
+2025-11-29 18:20:30 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.tethering.capex"
+2025-11-29 18:20:30 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:30 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.tethering.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-j25nre9l.apex"
+2025-11-29 18:20:30 - common.py - INFO    : 
+2025-11-29 18:20:30 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.tzdata.apex"
+2025-11-29 18:20:30 - common.py - INFO    : UNCOMPRESSED
+2025-11-29 18:20:30 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.uwb.capex"
+2025-11-29 18:20:30 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:30 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.uwb.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-1cpjgita.apex"
+2025-11-29 18:20:30 - common.py - INFO    : 
+2025-11-29 18:20:30 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.virt.apex"
+2025-11-29 18:20:31 - common.py - INFO    : UNCOMPRESSED
+2025-11-29 18:20:31 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer --debugfs_path out/host/linux-x86/bin/debugfs_static info --print-type /home/relimus/lineage/out/target/product/m2468/obj/PA
+CKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM/apex/com.android.wifi.capex"
+2025-11-29 18:20:31 - common.py - INFO    : COMPRESSED
+2025-11-29 18:20:31 - common.py - INFO    :   Running: "out/host/linux-x86/bin/deapexer decompress --input /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-tar
+get_files/SYSTEM/apex/com.android.wifi.capex --output /home/relimus/lineage/out/soong/.temp/decompressed-ecu1uyfp.apex"
+2025-11-29 18:20:31 - common.py - INFO    : 
+2025-11-29 18:20:31 - apex_utils.py - INFO    : No APEX directory at path: /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/SYSTEM_EXT/apex
+2025-11-29 18:20:31 - apex_utils.py - INFO    : No APEX directory at path: /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/PRODUCT/apex
+2025-11-29 18:20:31 - apex_utils.py - INFO    : No APEX directory at path: /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/VENDOR/apex
+2025-11-29 18:20:31 - apex_utils.py - INFO    : No APEX directory at path: /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/ODM/apex
+2025-11-29 18:20:31 - add_img_to_target_files.py - INFO    : 
+
+++++ userdata  ++++
+
+
+2025-11-29 18:20:31 - add_img_to_target_files.py - INFO    : 
+
+++++ cache  ++++
+
+
+2025-11-29 18:20:31 - add_img_to_target_files.py - INFO    : 
+
+++++ dtbo  ++++
+
+
+2025-11-29 18:20:31 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/avbtool add_hash_footer --image /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_inter
+mediates/lineage_m2468-target_files/IMAGES/dtbo.img --partition_size 12582912 --partition_name dtbo --salt 218f9449bfebcbf5a7d814b5526d7b59b2898fee7d5f1e9666285e2381db5875 --prop com.android.build.dtbo.fingerprin
+t:Meizu/lineage_m2468/m2468:15/BP1A.250505.005/eng.relimu:userdebug/test-keys"
+2025-11-29 18:20:32 - common.py - INFO    : 
+2025-11-29 18:20:32 - add_img_to_target_files.py - INFO    : 
+
+++++ vbmeta_system  ++++
+
+
+2025-11-29 18:20:32 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/avbtool make_vbmeta_image --output /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_in
+termediates/lineage_m2468-target_files/IMAGES/vbmeta_system.img --key external/avb/test/data/testkey_rsa4096.pem --algorithm SHA256_RSA4096 --include_descriptors_from_image /home/relimus/lineage/out/target/produc
+t/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/IMAGES/system.img --padding_size 4096 --rollback_index 1761955200"
+2025-11-29 18:20:32 - common.py - INFO    : 
+2025-11-29 18:20:32 - add_img_to_target_files.py - INFO    : 
+
+++++ vbmeta  ++++
+
+
+2025-11-29 18:20:32 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/avbtool extract_public_key --key external/avb/test/data/testkey_rsa4096.pem --output /home/relimus/lineage/out/
+soong/.temp/avb-fffk9mbc.avbpubkey"
+2025-11-29 18:20:32 - common.py - INFO    : 
+2025-11-29 18:20:32 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/avbtool extract_public_key --key external/avb/test/data/testkey_rsa4096.pem --output /home/relimus/lineage/out/
+soong/.temp/avb-g628iy0m.avbpubkey"
+2025-11-29 18:20:32 - common.py - INFO    : 
+2025-11-29 18:20:32 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/avbtool extract_public_key --key external/avb/test/data/testkey_rsa4096.pem --output /home/relimus/lineage/out/
+soong/.temp/avb-xnbnn00v.avbpubkey"
+2025-11-29 18:20:32 - common.py - INFO    : 
+2025-11-29 18:20:32 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/avbtool make_vbmeta_image --output /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_in
+termediates/lineage_m2468-target_files/IMAGES/vbmeta.img --key external/avb/test/data/testkey_rsa4096.pem --algorithm SHA256_RSA4096 --include_descriptors_from_image /home/relimus/lineage/out/target/product/m2468
+/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/IMAGES/dtbo.img --include_descriptors_from_image /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineag
+e_m2468-target_files/IMAGES/init_boot.img --include_descriptors_from_image /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/IMAGES/vendor_boot.img
+ --chain_partition boot:1:/home/relimus/lineage/out/soong/.temp/avb-fffk9mbc.avbpubkey --chain_partition recovery:3:/home/relimus/lineage/out/soong/.temp/avb-g628iy0m.avbpubkey --chain_partition vbmeta_system:2:/
+home/relimus/lineage/out/soong/.temp/avb-xnbnn00v.avbpubkey --flags 3 --padding_size 4096"
+2025-11-29 18:20:32 - common.py - INFO    : 
+2025-11-29 18:20:32 - add_img_to_target_files.py - INFO    : 
+
+++++ super_empty  ++++
+
+
+2025-11-29 18:20:32 - build_super_image.py - INFO    : Building super image from info dict...
+2025-11-29 18:20:32 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/lpmake --metadata-size 65536 --super-name super --metadata-slots 3 --virtual-ab --device super:9126805504 --gro
+up qti_dynamic_partitions_a:9122611200 --group qti_dynamic_partitions_b:9122611200 --partition product_a:none:0:qti_dynamic_partitions_a --partition product_b:none:0:qti_dynamic_partitions_b --partition system_a:
+none:0:qti_dynamic_partitions_a --partition system_b:none:0:qti_dynamic_partitions_b --partition system_ext_a:none:0:qti_dynamic_partitions_a --partition system_ext_b:none:0:qti_dynamic_partitions_b --sparse --ou
+tput /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/IMAGES/super_empty.img"
+2025-11-29 18:20:32 - common.py - INFO    : 
+2025-11-29 18:20:32 - build_super_image.py - INFO    : Done writing image /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/IMAGES/super_empty.img
+2025-11-29 18:20:32 - build_super_image.py - INFO    : Building super image from info dict...
+2025-11-29 18:20:32 - common.py - INFO    :   Running: "/home/relimus/lineage/out/host/linux-x86/bin/lpmake --metadata-size 65536 --super-name super --metadata-slots 3 --virtual-ab --device super:9126805504 --gro
+up qti_dynamic_partitions_a:9122611200 --group qti_dynamic_partitions_b:9122611200 --partition product_a:none:0:qti_dynamic_partitions_a --partition product_b:none:0:qti_dynamic_partitions_b --partition system_a:
+none:0:qti_dynamic_partitions_a --partition system_b:none:0:qti_dynamic_partitions_b --partition system_ext_a:none:0:qti_dynamic_partitions_a --partition system_ext_b:none:0:qti_dynamic_partitions_b --sparse --ou
+tput /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/IMAGES/unsparse_super_empty.img"
+2025-11-29 18:20:32 - common.py - INFO    : 
+2025-11-29 18:20:32 - build_super_image.py - INFO    : Done writing image /home/relimus/lineage/out/target/product/m2468/obj/PACKAGING/target_files_intermediates/lineage_m2468-target_files/IMAGES/unsparse_super_e
+mpty.img
+2025-11-29 18:20:32 - add_img_to_target_files.py - INFO    : 
+
+++++ radio  ++++
+
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/relimus/lineage/out/host/linux-x86/bin/add_img_to_target_files/__main__.py", line 12, in <module>
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "add_img_to_target_files.py", line 1269, in <module>
+  File "add_img_to_target_files.py", line 1261, in main
+  File "add_img_to_target_files.py", line 1171, in AddImagesToTargetFiles
+  File "add_img_to_target_files.py", line 750, in CheckAbOtaImages
+AssertionError: Failed to find odm.img
+18:20:37 ninja failed with: exit status 1

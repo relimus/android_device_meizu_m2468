@@ -93,7 +93,6 @@ PRODUCT_PACKAGES += \
     audioadsprpcd \
     android.hardware.audio.service \
     audio.primary.kalama \
-    sound_trigger.primary.kalama \
     libagm_compress_plugin \
     libagm_mixer_plugin \
     libagm_pcm_plugin \
@@ -123,7 +122,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/usecaseKvManager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager.xml \
-    $(LOCAL_PATH)/configs/audio/sku_kalama/adsp_sleep_monitor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/adsp_sleep_monitor.conf \
     $(LOCAL_PATH)/configs/audio/sku_kalama/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/audio_effects.conf \
     $(LOCAL_PATH)/configs/audio/sku_kalama/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/audio_effects.xml \
     $(LOCAL_PATH)/configs/audio/sku_kalama/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/audio_policy_configuration.xml
@@ -141,6 +139,11 @@ PRODUCT_PACKAGES += \
 # Atrace
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
+
+# Aidl
+PRODUCT_PACKAGES += \
+    graphicbuffersource-aidl-ndk \
+    libstagefright_graphicbuffersource_aidl
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -181,6 +184,10 @@ PRODUCT_PACKAGES += \
     libemutls_get_address
 
 # Display
+PRODUCT_PACKAGES += \
+    vendor.display.config@1.5 \
+    vendor.qti.hardware.display.config-V2-ndk
+    
 #PRODUCT_PACKAGES += \
 #    vendor.qti.hardware.display.demura-service \
 #    vendor.qti.hardware.display.allocator-service \
@@ -294,6 +301,11 @@ PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8550/audio/primary-hal
 
 # Media
+PRODUCT_PACKAGES += \
+    android.hardware.media.c2@1.0 \
+    android.hardware.media.c2@1.1 \
+    android.hardware.media.c2@1.2
+
 PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/common/codec2/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml \
     $(AUDIO_HAL_DIR)/configs/common/codec2/service/1.0/c2audio.vendor.base-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.base-arm64.policy \
@@ -546,7 +558,6 @@ TARGET_FLATTEN_APEX := false
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi-service \
     wpa_cli \
     wpa_supplicant \
     hostapd \

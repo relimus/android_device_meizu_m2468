@@ -68,18 +68,12 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/hw/audio.bluetooth.default.so': blob_fixup()
         .replace_needed('android.hardware.bluetooth.audio-V2-ndk', 'android.hardware.bluetooth.audio-V5-ndk'),
 
-       (
-        'system/lib64/graphicbuffersource-aidl-ndk.so',
-        'system/lib64/libstagefright_graphicbuffersource_aidl.so',
-        ): blob_fixup()
-        .replace_needed('android.hardware.graphics.common-V5-ndk', 'android.hardware.graphics.common-V6-ndk'),
-
         (
             'system_ext/lib64/libmiracastsystem.so',
             'system_ext/lib64/libwfdservice.so',
         ): blob_fixup()
         .replace_needed('android.media.audio.common.types-V2-cpp', 'android.media.audio.common.types-V4-cpp'),
-        
+
 }  # fmt: skip
 
 module = ExtractUtilsModule(

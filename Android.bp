@@ -40,3 +40,10 @@ prebuilt_hidl_interfaces {
         "vendor.qti.hardware.wifi.wifilearner@1.0::IWifiStats",
     ],
 }
+
+prebuilt_hidl_interfaces {
+    name: "hidl_vendor_aks_gamepad_interface",
+    interfaces: [
+        "vendor.aks.gamepad@1.0::IGamepad",
+    ],
+}
