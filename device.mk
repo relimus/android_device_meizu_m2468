@@ -260,10 +260,6 @@ PRODUCT_COPY_FILES += \
 # Health
 $(call inherit-product, vendor/qcom/opensource/healthd-ext/health-vendor-product.mk)
 
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
-
 # Init
 #PRODUCT_COPY_FILES += \
 #    $(LOCAL_PATH)/init/init.sm8550.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.sm8550.rc \

@@ -1971,6 +1971,22 @@
             <instance>default</instance>
         </interface>
     </hal>
+        <hal format="hidl" optional="true">
+        <name>vendor.tms.tmsese</name>
+        <version>1.0</version>
+        <interface>
+            <name>ITmsEse</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.tms.tmsnfc</name>
+        <version>1.0</version>
+        <interface>
+            <name>ITmsNfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <sepolicy>
         <kernel-sepolicy-version>30</kernel-sepolicy-version>
         <sepolicy-version>29.0</sepolicy-version>
