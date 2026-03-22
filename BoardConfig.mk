@@ -14,3 +14,7 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # System props
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
+
+# VINTF
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(DEVICE_PATH)/configs/vintf/compatibility_matrix.device.xml
