@@ -1,4 +1,4 @@
-DEVICE_PATH := device/lineage/gsi
+DEVICE_PATH := device/meizu/m2468
 
 # Bluetooth Audio (System-side HAL, sysbta)
 PRODUCT_PACKAGES += \

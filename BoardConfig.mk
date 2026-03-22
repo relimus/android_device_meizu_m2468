@@ -1,7 +1,12 @@
-DEVICE_PATH := device/lineage/gsi
+include build/make/target/board/generic_arm64/BoardConfig.mk
+
+DEVICE_PATH := device/meizu/m2468
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
+
+# Needed by MindTheGapps
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # SELinux
 SELINUX_IGNORE_NEVERALLOWS := true
