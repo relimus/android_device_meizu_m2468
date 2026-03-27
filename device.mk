@@ -9,6 +9,10 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration.xml \
     $(DEVICE_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration_7_0.xml
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    mz_fp_gesture_init
+
 # Fixes inherited from PHH
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/init/init-gsi.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init-gsi.rc \

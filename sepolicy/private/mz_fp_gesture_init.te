@@ -1,0 +1,11 @@
+type mz_fp_gesture_init, domain, coredomain;
+type sysfs_fp_gesture, fs_type, sysfs_type;
+type mz_fp_gesture_init_exec, exec_type, system_file_type, file_type;
+
+init_daemon_domain(mz_fp_gesture_init)
+
+# init-gsi.rc chmods the sysfs node before the helper runs.
+allow init sysfs_fp_gesture:file setattr;
+
+# Write and verify the gesture mask in the fingerprint controller sysfs node
+allow mz_fp_gesture_init sysfs_fp_gesture:file { open read write getattr };
