@@ -1,7 +1,6 @@
 $(call inherit-product, vendor/lineage/build/target/product/lineage_gsi_arm64.mk)
 
 $(call inherit-product, device/meizu/m2468/device.mk)
-$(call inherit-product, vendor/hardware_overlay/overlay.mk)
 
 ## Device identifier
 PRODUCT_BRAND := Meizu
