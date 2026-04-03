@@ -12,3 +12,12 @@ cc_binary {
         "-Werror",
     ],
 }
+
+cc_binary {
+    name: "mz_fp_hbm_daemon",
+    srcs: ["daemon/mz_fp_hbm_daemon.cpp"],
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
+}

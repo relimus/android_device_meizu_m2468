@@ -1,0 +1,11 @@
+type mz_fp_hbm_daemon, domain, coredomain;
+type mz_fp_hbm_daemon_exec, exec_type, system_file_type, file_type;
+type sysfs_fp_hbm, fs_type, sysfs_type;
+
+init_daemon_domain(mz_fp_hbm_daemon)
+
+allow mz_fp_hbm_daemon input_device:dir search;
+allow mz_fp_hbm_daemon input_device:chr_file { getattr ioctl open read };
+allow mz_fp_hbm_daemon sysfs:dir search;
+allow mz_fp_hbm_daemon sysfs:file { getattr open read write };
+allow mz_fp_hbm_daemon sysfs_fp_hbm:file { getattr open write };

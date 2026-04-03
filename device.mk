@@ -11,7 +11,8 @@ PRODUCT_COPY_FILES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    mz_fp_gesture_init
+    mz_fp_gesture_init \
+    mz_fp_hbm_daemon
 
 # Fixes inherited from PHH
 PRODUCT_COPY_FILES += \
