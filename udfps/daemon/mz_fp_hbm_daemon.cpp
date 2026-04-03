@@ -1,4 +1,7 @@
 #include <errno.h>
+#include <binder/IBinder.h>
+#include <binder/IServiceManager.h>
+#include <binder/Parcel.h>
 #include <fcntl.h>
 #include <linux/input.h>
 #include <poll.h>
@@ -9,6 +12,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
+#include <utils/Errors.h>
+#include <utils/String16.h>
 #include <sys/types.h>
 #include <unistd.h>
 
@@ -18,10 +23,15 @@
 namespace {
 
 constexpr const char kHbmPath[] = "/sys/kernel/display_drivers/hbm";
+constexpr const char kFingerprintServiceName[] = "fingerprint";
+constexpr const char kFingerprintServiceDescriptor[] =
+        "android.hardware.fingerprint.IFingerprintService";
 
 // Derived from the Goodix driver call sites that report FOD-UP/FOD-DOWN via
 // mz_gesture_report().
 constexpr unsigned short kFodGestureKeyCode = 0x272;
+constexpr uint32_t kFingerprintTransactIsClientActive =
+        android::IBinder::FIRST_CALL_TRANSACTION + 28;
 
 constexpr int kHbmOnValue = 6;
 constexpr int kHbmOffValue = 7;
@@ -32,6 +42,13 @@ constexpr int kRescanIntervalSeconds = 5;
 constexpr int kHbmAutoOffTimeoutMs = 400;
 
 volatile sig_atomic_t gShouldExit = 0;
+
+using android::IBinder;
+using android::OK;
+using android::Parcel;
+using android::String16;
+using android::defaultServiceManager;
+using android::sp;
 
 int64_t elapsed_realtime_ms() {
     timespec ts = {};
@@ -77,6 +94,39 @@ bool write_int_node(const char* path, int value) {
     char buf[16];
     snprintf(buf, sizeof(buf), "%d\n", value);
     return write_text_node(path, buf);
+}
+
+bool is_fingerprint_client_active() {
+    const auto sm = defaultServiceManager();
+    if (sm == nullptr) {
+        log_line("E", "servicemanager unavailable");
+        return false;
+    }
+
+    const sp<IBinder> service = sm->checkService(String16(kFingerprintServiceName));
+    if (service == nullptr) {
+        log_line("E", "fingerprint service unavailable");
+        return false;
+    }
+
+    Parcel data;
+    Parcel reply;
+    data.writeInterfaceToken(String16(kFingerprintServiceDescriptor));
+
+    const android::status_t status =
+            service->transact(kFingerprintTransactIsClientActive, data, &reply, 0);
+    if (status != OK) {
+        log_line("E", "fingerprint isClientActive transact failed: %d", status);
+        return false;
+    }
+
+    const int32_t exception = reply.readExceptionCode();
+    if (exception != 0) {
+        log_line("E", "fingerprint isClientActive exception: %d", exception);
+        return false;
+    }
+
+    return reply.readBool();
 }
 
 class HbmController {
@@ -168,7 +218,13 @@ bool handle_events(int fd, HbmController* hbm) {
         if (n == static_cast<ssize_t>(sizeof(ev))) {
             if (ev.type == EV_KEY && ev.code == kFodGestureKeyCode) {
                 log_line("I", "FOD event code=0x%x value=%d", ev.code, ev.value);
-                hbm->setState(ev.value != 0);
+                if (ev.value != 0) {
+                    if (is_fingerprint_client_active()) {
+                        hbm->setState(true);
+                    }
+                } else {
+                    hbm->setState(false);
+                }
             }
             continue;
         }
