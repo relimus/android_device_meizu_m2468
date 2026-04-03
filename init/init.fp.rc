@@ -1,0 +1,10 @@
+# Fingerprint FOD gesture
+on property:sys.boot_completed=1
+    start mz_gesture_control_init
+
+service mz_gesture_control_init /system/bin/mz_fp_gesture_init
+    class late_start
+    user system
+    group system
+    disabled
+    oneshot

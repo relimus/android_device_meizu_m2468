@@ -16,6 +16,7 @@ PRODUCT_PACKAGES += \
 # Fixes inherited from PHH
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/init/init-gsi.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init-gsi.rc \
+    $(DEVICE_PATH)/init/init.fp.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.fp.rc \
     $(DEVICE_PATH)/init/treble-post-fs.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/treble-post-fs.sh \
     $(DEVICE_PATH)/init/treble-prop-handler.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/treble-prop-handler.sh
 

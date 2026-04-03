@@ -10,17 +10,6 @@ on post-fs
 on post-fs-data
     chmod 0777 /sys/devices/platform/mx-gs/gesture_control
 
-# Fingerprint FOD gesture
-on property:sys.boot_completed=1
-    start mz_gesture_control_init
-
-service mz_gesture_control_init /system/bin/mz_fp_gesture_init
-    class late_start
-    user system
-    group system
-    disabled
-    oneshot
-
 on property:persist.sys.treble.mainkeys=*
     setprop qemu.hw.mainkeys ${persist.sys.treble.mainkeys}
 
