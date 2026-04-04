@@ -1,4 +1,7 @@
-# Fingerprint FOD gesture
+# Fingerprint FOD gesture & HBM
+on post-fs-data
+    chmod 0777 /sys/devices/platform/mx-gs/gesture_control
+
 on property:sys.boot_completed=1
     start mz_gesture_control_init
     start mz_fp_hbm_daemon
