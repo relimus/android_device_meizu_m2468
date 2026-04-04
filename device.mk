@@ -30,6 +30,10 @@ PRODUCT_PACKAGES += \
     AvoidAppsInCutoutOverlay \
     NoCutoutOverlay
 
+# IMS
+PRODUCT_PACKAGES += \
+    qcom-overlay-caf-ims
+
 # Init
 PRODUCT_PACKAGES += \
     init.m2468.rc \
