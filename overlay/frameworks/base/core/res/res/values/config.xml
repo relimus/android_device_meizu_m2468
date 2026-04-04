@@ -32,6 +32,12 @@
     <string-array name="config_biometric_sensors" translatable="false" >
     </string-array>
 
+    <integer-array name="config_udfps_sensor_props" translatable="false">
+        <item>632</item>
+        <item>2460</item>
+        <item>104</item>
+    </integer-array>
+
     <array name="config_availableColorModes">
         <!-- ColorDisplayManager.COLOR_MODE_NATURAL -->
         <item>0</item>

@@ -18,4 +18,6 @@
 <resources>
     <!-- Fix for the qs glitch on displays under sw372dp -->
     <dimen name="rounded_corner_content_padding">8dp</dimen>
+
+    <item name="pixel_pitch" format="float" type="dimen">56.4</item>
 </resources>
