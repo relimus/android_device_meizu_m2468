@@ -32,7 +32,8 @@ PRODUCT_PACKAGES += \
 
 # IMS
 PRODUCT_PACKAGES += \
-    qcom-overlay-caf-ims
+    qcom-overlay-caf-ims \
+    qcom-overlay-telephony-caf-ims
 
 # Init
 PRODUCT_PACKAGES += \
