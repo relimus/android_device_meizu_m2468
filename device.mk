@@ -42,6 +42,11 @@ PRODUCT_PACKAGES += \
     init.m2468.rc \
 
 # Overlays
+PRODUCT_PACKAGES += \
+    CarrierConfig \
+    FrameworksResM2468 \
+    TelephonyResCommon
+
 PRODUCT_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
     $(DEVICE_PATH)/overlay-lineage

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="34"
+    android:versionName="14"
+    package="com.android.carrierconfig.overlay.m2468">
+    <overlay
+        android:priority="100"
+        android:targetPackage="com.android.carrierconfig"
+        android:isStatic="true" />
+</manifest>
