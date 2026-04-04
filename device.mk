@@ -32,6 +32,8 @@ PRODUCT_PACKAGES += \
 
 # IMS
 PRODUCT_PACKAGES += \
+    ims \
+    privapp-permissions-org.codeaurora.ims.xml \
     qcom-overlay-caf-ims \
     qcom-overlay-telephony-caf-ims
 

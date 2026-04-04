@@ -1,0 +1,15 @@
+android_app_import {
+    name: "ims",
+    apk: "resources/ims.apk",
+    privileged: true,
+    presigned: true,
+    preprocessed: true,
+    skip_preprocessed_apk_checks: true,
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-org.codeaurora.ims.xml",
+    src: "resources/privapp-permissions-org.codeaurora.ims.xml",
+    relative_install_path: "permissions",
+    filename_from_src: true,
+}
