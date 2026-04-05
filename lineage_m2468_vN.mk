@@ -1,1 +1,0 @@
-$(call inherit-product, device/meizu/m2468/lineage_m2468_base.mk)
