@@ -1,4 +1,6 @@
 $(call inherit-product, vendor/lineage/build/target/product/lineage_gsi_arm64.mk)
+$(call inherit-product, vendor/lineage/config/BoardConfigSoong.mk)
+$(call inherit-product, vendor/lineage/config/BoardConfigLineage.mk)
 
 $(call inherit-product, device/meizu/m2468/device.mk)
 
