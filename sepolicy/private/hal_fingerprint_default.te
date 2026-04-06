@@ -1,0 +1,6 @@
+# Fingerprint HAL to vendor perf over HwBinder
+
+allow hal_fingerprint_server protected_hwservice:hwservice_manager find;
+allow hal_fingerprint_server { halserverdomain -coredomain }:binder { call transfer };
+allow { halserverdomain -coredomain } hal_fingerprint_server:binder transfer;
+allow hal_fingerprint_server { halserverdomain -coredomain }:fd use;
