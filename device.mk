@@ -27,15 +27,6 @@ PRODUCT_PACKAGES += \
     mz_fp_gesture_init \
     mz_fp_hbm_daemon
 
-# Fixes inherited from PHH
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/init/init-gsi.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init-gsi.rc \
-    $(DEVICE_PATH)/init/treble-post-fs.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/treble-post-fs.sh \
-    $(DEVICE_PATH)/init/treble-prop-handler.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/treble-prop-handler.sh
-
-PRODUCT_PACKAGES += \
-    resetprop_sys
-
 # Hide display cutout
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_hide_display_cutout=true
@@ -53,7 +44,6 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     init.m2468.rc \
-    init.gsi.rc \
     gsi_skip_mount.cfg
 
 # Memory

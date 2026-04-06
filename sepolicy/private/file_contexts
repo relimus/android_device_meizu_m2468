@@ -1,5 +1,4 @@
 /system/bin/hw/android\.hardware\.bluetooth\.audio-service-system    u:object_r:hal_audio_sysbta_exec:s0
-/system/bin/treble-post-fs.sh                                        u:object_r:phhsu_exec:s0
 /system/bin/mz_fp_gesture_init                                       u:object_r:mz_fp_gesture_init_exec:s0
 /system/bin/mz_fp_hbm_daemon                                         u:object_r:mz_fp_hbm_daemon_exec:s0
 /sys/kernel/display_drivers/hbm                                      u:object_r:sysfs_fp_hbm:s0
