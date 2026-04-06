@@ -1,5 +1,5 @@
 prebuilt_etc {
     name: "init.m2468.rc",
-    src: "init.m2468.rc",
+    src: "etc/init.m2468.rc",
     sub_dir: "init",
 }
