@@ -105,4 +105,4 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.settings.large_screen_opt.enabled=true
 
 # VNDK
-PRODUCT_EXTRA_VNDK_VERSIONS := 30 31 32 33 34
+PRODUCT_EXTRA_VNDK_VERSIONS := 33
