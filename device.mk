@@ -53,6 +53,7 @@ PRODUCT_ENABLE_UFFD_GC := true
 PRODUCT_PACKAGES += \
     CarrierConfig \
     FrameworksResM2468 \
+    SettingsResCommon \
     TelephonyResCommon
 
 PRODUCT_PACKAGE_OVERLAYS += \
