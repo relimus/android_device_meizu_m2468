@@ -1,0 +1,1 @@
+persist.sys.mz.sms_receive_fix_restore    u:object_r:mz_sms_receive_fix_prop:s0 exact string

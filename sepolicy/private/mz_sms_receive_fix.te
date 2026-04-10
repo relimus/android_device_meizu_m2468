@@ -1,0 +1,12 @@
+type mz_sms_receive_fix, domain, coredomain;
+type mz_sms_receive_fix_exec, exec_type, system_file_type, file_type;
+
+init_daemon_domain(mz_sms_receive_fix)
+binder_use(mz_sms_receive_fix)
+binder_call(mz_sms_receive_fix, system_server)
+binder_call(system_server, mz_sms_receive_fix)
+
+allow mz_sms_receive_fix connectivity_service:service_manager find;
+allow mz_sms_receive_fix settings_service:service_manager find;
+allow system_server mz_sms_receive_fix:fifo_file { getattr write };
+set_prop(mz_sms_receive_fix, mz_sms_receive_fix_prop)
