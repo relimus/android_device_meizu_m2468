@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fix for the qs glitch on displays under sw372dp -->
+    <dimen name="rounded_corner_content_padding">8dp</dimen>
+
+    <!-- Fix icon of fingerprint -->
+    <item name="pixel_pitch" format="float" type="dimen">56.4</item>
+
+    <!-- Location on the screen of the center of the physical power button. This is a reasonable
+    default that should be overridden by device-specific overlays. -->
+    <dimen name="physical_power_button_center_screen_location_y">1250px</dimen>
+
+    <!-- the padding on the start of the statusbar -->
+    <dimen name="status_bar_padding_start">22px</dimen>
+
+    <!-- the padding on the end of the statusbar -->
+    <dimen name="status_bar_padding_end">22px</dimen>
+</resources>

@@ -54,20 +54,11 @@ PRODUCT_PACKAGES += \
     CarrierConfig \
     FrameworksResM2468 \
     SettingsResCommon \
+    SystemUIResM2468 \
     TelephonyResCommon
 
 PRODUCT_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay \
     $(DEVICE_PATH)/overlay-lineage
-
-ifneq ($(PRODUCT_IS_AUTOMOTIVE),true)
-PRODUCT_PACKAGES += \
-    gsi_overlay_framework \
-    gsi_overlay_systemui
-
-PRODUCT_COPY_FILES += \
-    device/generic/common/overlays/overlay-config.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/overlay/config/config.xml
-endif
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true

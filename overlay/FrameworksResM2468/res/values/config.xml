@@ -11,19 +11,19 @@
         <item>255</item>
     </integer-array>
     <integer-array name="config_availableColorModes">
+        <!-- ColorDisplayManager.COLOR_MODE_NATURAL -->
         <item>0</item>
+        <!-- ColorDisplayManager.COLOR_MODE_BOOSTED -->
         <item>1</item>
+        <!-- ColorDisplayManager.COLOR_MODE_SATURATED -->
+        <item>2</item>
+        <!-- ColorDisplayManager.COLOR_MODE_AUTOMATIC -->
         <item>3</item>
-        <item>256</item>
-        <item>257</item>
-        <item>258</item>
-        <item>259</item>
-        <item>260</item>
-        <item>261</item>
-        <item>262</item>
-        <item>263</item>
-        <item>264</item>
-        <item>265</item>
+    </integer-array>
+    <integer-array name="config_udfps_sensor_props">
+        <item>632</item>
+        <item>2460</item>
+        <item>104</item>
     </integer-array>
     <string-array name="config_mobile_tcp_buffers">
         <item>5gnr:2097152,6291456,16777216,512000,2097152,8388608</item>
@@ -151,6 +151,10 @@
     <bool name="config_wifi_p2p_mac_randomization_supported">true</bool>
     <bool name="config_wifi_softap_acs_supported">true</bool>
     <bool name="config_wifi_softap_ieee80211ac_supported">true</bool>
+    <bool name="config_enableAutoPowerModes">true</bool>
+    <bool name="config_intrusiveNotificationLed">true</bool>
+    <bool name="config_swipe_up_gesture_setting_available">true</bool>
+    <bool name="config_smart_battery_available">true</bool>
     <bool name="skip_restoring_network_selection">true</bool>
 
     <integer name="config_defaultPeakRefreshRate">240</integer>
@@ -162,4 +166,5 @@
     <string name="config_qualified_networks_service_package">vendor.qti.iwlan</string>
     <string name="config_wlan_data_service_package">vendor.qti.iwlan</string>
     <string name="config_wlan_network_service_package">vendor.qti.iwlan</string>
+    <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
 </resources>
