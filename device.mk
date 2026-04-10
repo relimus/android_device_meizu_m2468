@@ -88,6 +88,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     QcRilAm
 
+# SMS Fix
+PRODUCT_PACKAGES += \
+    mz_sms_receive_fix
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
