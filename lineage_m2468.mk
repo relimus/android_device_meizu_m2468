@@ -7,6 +7,9 @@ $(call inherit-product, vendor/lineage/config/BoardConfigLineage.mk)
 
 $(call inherit-product, device/meizu/m2468/device.mk)
 
+# Inherit AviumUI configs.
+include device/meizu/m2468/avium_common.mk
+
 ## Device identifier
 PRODUCT_BRAND := Meizu
 PRODUCT_DEVICE := m2468
