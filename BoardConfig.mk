@@ -1,6 +1,7 @@
 include build/make/target/board/generic_arm64/BoardConfig.mk
 
 DEVICE_PATH := device/meizu/m2468
+KERNEL_PATH := $(DEVICE_PATH)-kernel
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
@@ -22,8 +23,70 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a75
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 
+# Boot
+BOARD_BOOT_HEADER_VERSION := 4
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+
+# Init Boot
+BOARD_INIT_BOOT_HEADER_VERSION := 4
+BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
+
 # Kernel
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_BASE := 0x00000000
+
+BOARD_KERNEL_CMDLINE := \
+    video=vfb:640x400,bpp=32,memsize=3072000 \
+    qcom_geni_serial.con_enabled=1 \
+    nosoftlockup \
+    page_poison=1 \
+    sysrq_always_enabled \
+    bootconfig \
+    androidboot.selinux=permissive
+
+BOARD_BOOTCONFIG := \
+    androidboot.hardware=qcom \
+    androidboot.memcg=1 \
+    androidboot.usbcontroller=a600000.dwc3 \
+    androidboot.load_modules_parallel=true \
+    androidboot.console=ttyMSM0
+
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+
+BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_RAMDISK_USE_LZ4 := true
+BOARD_USES_GENERIC_KERNEL_IMAGE := true
+
+# Kernel - Prebuilt
+TARGET_NO_KERNEL := false
 TARGET_NO_KERNEL_OVERRIDE := true
+TARGET_KERNEL_VERSION := 5.15
+TARGET_KERNEL_SOURCE := $(KERNEL_PATH)/kernel-headers
+BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtb
+BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
+BOARD_PREBUILT_SYSTEM_DLKMIMAGE := $(KERNEL_PATH)/system_dlkm.img
+PRODUCT_COPY_FILES += $(KERNEL_PATH)/kernel:kernel
+
+# Kernel modules
+DLKM_MODULES_PATH := $(KERNEL_PATH)/vendor_dlkm
+RAMDISK_MODULES_PATH := $(KERNEL_PATH)/vendor_ramdisk
+
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DLKM_MODULES_PATH)/*.ko)
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(patsubst %,$(DLKM_MODULES_PATH)/%,$(shell cat $(DLKM_MODULES_PATH)/modules.load))
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DLKM_MODULES_PATH)/modules.blocklist
+
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(RAMDISK_MODULES_PATH)/*.ko)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(patsubst %,$(RAMDISK_MODULES_PATH)/%,$(shell cat $(RAMDISK_MODULES_PATH)/modules.load))
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD  := $(patsubst %,$(RAMDISK_MODULES_PATH)/%,$(shell cat $(RAMDISK_MODULES_PATH)/modules.load.recovery))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(RAMDISK_MODULES_PATH)/modules.blocklist
+
+# Partitions
+BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
+BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
+BOARD_DTBOIMG_PARTITION_SIZE := 12582912
+BOARD_INIT_BOOT_IMAGE_PARTITION_SIZE := 8388608
+BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
