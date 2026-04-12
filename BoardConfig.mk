@@ -2,14 +2,14 @@ include build/make/target/board/generic_arm64/BoardConfig.mk
 
 DEVICE_PATH := device/meizu/m2468
 
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 
 # Kernel
 TARGET_NO_KERNEL_OVERRIDE := true
-
-# Needed by MindTheGapps
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # SELinux
 SELINUX_IGNORE_NEVERALLOWS := true
