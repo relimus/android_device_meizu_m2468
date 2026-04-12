@@ -27,6 +27,11 @@ PRODUCT_PACKAGES += \
     mz_fp_gesture_init \
     mz_fp_hbm_daemon
 
+# Fstab
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+
 # Hide display cutout
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_hide_display_cutout=true
