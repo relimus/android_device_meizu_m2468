@@ -2,8 +2,6 @@ $(call inherit-product, device/generic/common/gsi_product.mk)
 $(call inherit-product, device/generic/common/gsi_system_ext.mk)
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
 
-include vendor/lineage/build/target/product/lineage_generic_target.mk
-
 DEVICE_PATH := device/meizu/m2468
 
 # API
@@ -12,6 +10,8 @@ PRODUCT_SHIPPING_API_LEVEL := 34
 # Based on GSI
 BUILDING_GSI := true
 MODULE_BUILD_FROM_SOURCE := true
+TARGET_FORCE_OTA_PACKAGE := true
+USE_SOONG_DEFINED_SYSTEM_IMAGE := false
 
 # Bluetooth Audio (System-side HAL, sysbta)
 PRODUCT_PACKAGES += \
