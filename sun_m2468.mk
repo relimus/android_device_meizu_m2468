@@ -5,16 +5,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit generic system.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_system.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common SunOS stuff.
+$(call inherit-product, vendor/sun/config/common_full_phone.mk)
 
-$(call inherit-product, vendor/lineage/config/BoardConfigSoong.mk)
-$(call inherit-product, vendor/lineage/config/BoardConfigLineage.mk)
+$(call inherit-product, vendor/sun/config/BoardConfigSoong.mk)
+$(call inherit-product, vendor/sun/config/BoardConfigSun.mk)
 
 $(call inherit-product, device/meizu/m2468/device.mk)
-
-# Inherit AviumUI configs.
-include device/meizu/m2468/avium_common.mk
 
 ## Device identifier
 PRODUCT_BRAND := Meizu

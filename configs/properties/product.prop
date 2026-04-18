@@ -60,7 +60,6 @@ ro.af.client_heap_size_kbyte=7168
 ro.boot.wificountrycode=CN
 ro.channel.cn.wps.moffice_eng=oem00204
 ro.com.android.dataroaming=false
-ro.com.google.gmsversion=14_202408
 ro.control_privapp_permissions=enforce
 ro.display.screen_type=1
 ro.hardware.hifi.support=true
