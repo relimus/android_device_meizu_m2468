@@ -16,7 +16,9 @@ USE_SOONG_DEFINED_SYSTEM_IMAGE := false
 # Bluetooth Audio (System-side HAL, sysbta)
 PRODUCT_PACKAGES += \
     audio.sysbta.default \
-    android.hardware.bluetooth.audio-service-system
+    android.hardware.bluetooth.audio-service-system \
+    vendor.qti.hardware.btconfigstore@1.0 \
+    vendor.qti.hardware.btconfigstore@2.0
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration.xml \
