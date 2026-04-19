@@ -4,7 +4,7 @@
     android:versionName="14"
     package="android.overlay.meizu.m2468">
     <overlay
-        android:priority="100"
+        android:priority="900"
         android:targetPackage="android"
         android:isStatic="true" />
 </manifest>
