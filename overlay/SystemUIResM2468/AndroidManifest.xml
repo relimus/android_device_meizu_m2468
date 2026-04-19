@@ -5,6 +5,7 @@
     android:versionName="14"
     package="com.android.systemui.overlay.m2468">
     <overlay
+        android:priority="900"
         android:targetPackage="com.android.systemui"
         android:isStatic="true" />
 </manifest>
