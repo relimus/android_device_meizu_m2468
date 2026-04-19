@@ -95,6 +95,16 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     QcRilAm
 
+TARGET_COMMON_QTI_COMPONENTS := \
+    alarm \
+    audio \
+    av \
+    bt \
+    display \
+    init \
+    perf \
+    wfd
+
 # SMS Fix
 PRODUCT_PACKAGES += \
     mz_sms_receive_fix
