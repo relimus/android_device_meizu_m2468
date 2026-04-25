@@ -202,14 +202,9 @@
     <item format="float" name="config_screenBrightnessDimFloat" type="dimen">0.000854597</item>
 
     <integer-array name="config_availableColorModes">
-        <!-- ColorDisplayManager.COLOR_MODE_NATURAL -->
-        <item>0</item>
-        <!-- ColorDisplayManager.COLOR_MODE_BOOSTED -->
-        <item>1</item>
-        <!-- ColorDisplayManager.COLOR_MODE_SATURATED -->
-        <item>2</item>
-        <!-- ColorDisplayManager.COLOR_MODE_AUTOMATIC -->
-        <item>3</item>
+        <item>260</item>
+        <item>262</item>
+        <item>261</item>
     </integer-array>
     <integer-array name="config_udfps_sensor_props">
         <item>632</item>
