@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/sun_m2468.mk
+    $(LOCAL_DIR)/lineage_m2468.mk

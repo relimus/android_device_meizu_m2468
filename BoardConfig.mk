@@ -3,7 +3,6 @@ include build/make/target/board/generic_arm64/BoardConfig.mk
 DEVICE_PATH := device/meizu/m2468
 KERNEL_PATH := $(DEVICE_PATH)-kernel
 
-ALLOW_MISSING_DEPENDENCIES := true
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
